@@ -2,6 +2,7 @@
 
 ## Open Git Pull Requests  
 
+[https://github.com/joseph-zabaleta/daily-xkcd/pull/1](https://github.com/joseph-zabaleta/daily-xkcd/pull/1)  
 
 ## Overview  
 
@@ -15,7 +16,7 @@ The app will display most recent XKCD comic and have links to previous 10 comics
     - [x] `Home` page at `“/”`
     - [x] `About` page at `“/about”`
 - Web app should have dynamic routes
-    - Dynamic route should display a single comic
+    - [x] Dynamic route should display a single comic
 
 ## Implementation Notes:  
 - Refer to [XDCD API](https://xkcd.com/json.html)  
