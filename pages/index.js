@@ -27,7 +27,7 @@ export default function Home(props) {
                 }
 
                 .container {
-                    border: solid thin black;
+                    border: solid 1px #DDD;
                     margin: 2%;
                     padding: 20px;
                 }

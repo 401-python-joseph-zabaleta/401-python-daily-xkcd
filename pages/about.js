@@ -23,7 +23,7 @@ export default function About() {
                 }
 
                 .container {
-                    border: solid thin black;
+                    border: solid 1px #DDD;
                     margin: 2%;
                     padding: 20px;
                 }

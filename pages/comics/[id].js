@@ -21,7 +21,7 @@ export default function ComicDetail(props) {
                 }
 
                 .container {
-                    border: solid thin black;
+                    border: solid 1px #DDD;
                     margin: 2%;
                     padding: 20px;
                 }
