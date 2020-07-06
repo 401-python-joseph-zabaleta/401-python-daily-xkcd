@@ -12,8 +12,8 @@ The app will display most recent XKCD comic and have links to previous 10 comics
 ## Feature Tasks and Requirements  
 - Refer to [example site](https://xkcd-two.now.sh/)  
 - Web app should have 2 static routes
-    - `Home` page at `“/”`
-    - `About` page at `“/about”`
+    - [x] `Home` page at `“/”`
+    - [x] `About` page at `“/about”`
 - Web app should have dynamic routes
     - Dynamic route should display a single comic
 
@@ -46,4 +46,8 @@ This project is under the MIT License.
 
 ## Version History  
 - 1.0.0 20200702
-    - Initial files created.  
+    - Initial files created. 
+- 1.0.1 20200706  
+    - Implemented Static API working product  
+    - Switched to using API from URL  
+    

@@ -1,15 +1,17 @@
 import Link from 'next/link'
 import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 export default function Home(props) {
     return (
     <div className="container">
         <Nav />
         <h1>XKCD</h1>
-        <ul>
-            {props.comics.map(comic => <ComicItem comic={comic} />)}
-        </ul>
 
+        <h3>{props.comics.title}</h3>
+        <img src={props.comics.img} alt={props.comics.alt}></img>
+
+        <Footer comicNum={props.comics.num} />
         <style jsx global>{`
                 html,
                 body {
@@ -46,26 +48,15 @@ export default function Home(props) {
     )
 }
 
-function ComicItem(props) {
-    return (
-        <li key={props.comic.id}>
-            <Link href="/comics/[id]" as={`/comics/${props.comic.id}`}>
-            <a>
-                {props.comic.name}
-            </a>
-            </Link>
-        </li>
-    )
-}
 
-export async function getStaticProps() {
-    const url = 'http://localhost:3000/api/comics';
-    const response = await fetch(url);
-    const comics = await response.json();
+export async function getServerSideProps() {
+    const response = await fetch('https://xkcd.com/info.0.json');
+
+    const data = await response.json();
 
     return {
         props: {
-            comics: comics,
+            comics: data, 
         }
     }
-}   
+}
